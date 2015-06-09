@@ -6,5 +6,12 @@ This session might be for you if you deal with the challenge of communicating th
 
 The key takeaway from this session will be an improved strategy for identifying, measuring, preventing, and communicating technical debt.
 
+## Assets
+
+* [Outline](assets/outline.md)
+* [Slides Sketch](assets/slides-sketch.md)
+
+## Credits
+
 Built using [reveal.js](https://github.com/hakimel/reveal.js).
 
