@@ -41,13 +41,214 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+                <!-- Introduction -->
 				<section>
-					<h1>Technical Debt</h1>
-                    <h3>Insights from the Lorax</h3>
-					<p>
-						<small>Created by <a href="https://www.drupal.org/u/zendoodles">Andrea Soper</a> (<a href="https://twitter.com/zendoodles">@ZenDoodles</a>) and <a href="https://www.drupal.org/u/josephdpurcell">Joseph D. Purcell</a> (<a href="https://twitter.com/josephdpurcell">@josephdpurcell</a>)</small>
-					</p>
+                    <section>
+                        <h1>Technical Debt</h1>
+                        <h3>Insights from the Lorax</h3>
+                    </section>
+
+                    <section>
+                        <h1>Who are we?</h1>
+                    </section>
+
+                    <section>
+                        <h1>Who are you?</h1>
+                    </section>
+
+                    <!-- Overview (tell em what youre gonna tell em) -->
+                    <section>
+                        <!--  Technical debt is analogous to environmental pollution and should be monitored and mitigated using similar principles. ?? -->
+                        <h1>Unless someone like you cares a whole awful lot its not going to get better its not.</h1>
+                        <ul>
+                            <li>Symptoms</li>
+                            <li>Causes</li>
+                            <li>Monitoring &amp; Policies</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <!-- Symptoms -->
+				<section>
+                    <section>
+                        <h1>What is technical debt?</h1>
+                    </section>
+
+                    <section>
+                        Context was agile: “We developed the product by incremental growth from a working prototype” (<a href="http://c2.com/doc/oopsla92.html">link</a>)
+                    </section>
+
+                    <section>
+                        Analogy: “Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite.” (<a href="http://c2.com/doc/oopsla92.html">link</a>)
+                    </section>
+
+                    <section>
+                        <h1>Monetary vs Environmental</h1>
+                        <!--
+                        The monetary analogy communicates the wrong idea about how technical debt is measured and how it impacts business.
+                        -->
+                    </section>
+
+                    <section>
+                        <img src="http://www.andrejkoelewijn.com/blog/images/2010/11/20101125-092139.jpg" alt="tech debt grid">
+                    </section>
+
+                    <section>
+                        <blockquote>I am the Lorax. I speak for the trees for the trees have no tongues.</blockquote>
+                    </section>
+                </section>
+
+                <!-- Causes -->
+				<section>
+                    <section>
+                        <h1>Causes of technical debt</h1>
+                    </section>
+
+
+                    <!-- 5 points: -->
+
+                    <section>
+                        Writing code and merging it with no one seeing it.
+                    </section>
+
+                    <section>
+                        Writing custom code that doesn’t follow standards, code style guidelines, design patterns, framework conventions, documentation, etc.
+                    </section>
+
+                    <section>
+                        Business pressures:
+                            releasing sooner before all necessary changes are complete.
+                            When businesses make decisions without considering the technical implications.
+                            When business requirements are not properly communicated to and understood by developers.
+                            When business requirements change after implementation.
+                            Delaying refactoring.
+                    </section>
+
+                    <section>
+                        Building monolithic architectures can result in close coupling and fail to meet the flexibility needed for changing business requirements.
+                    </section>
+
+                    <section>
+                        Parallel development risks implementing the wrong architecture. When the code is merged and/or integrated, tech debt may surface.
+                            INSERT MYTHICAL MAN MONTH QUOTE - the idea that you can 
+                    </section>
+
+                    <!-- end 5 points -->
+
+
+
+
+
+
+
+
+
+
+                    <!-- quotes to use -->
+
+                    <section>
+                        <blockquote>I laughed at the Lorax, "You poor stupid guy! You never can tell what some people will buy!"</blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>business is business and business must grow regardless of grummies in tummies, you know</blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>And FYI you Lorax, I'm figgering on biggering and biggering and BIGGERING and BIGGERING. turning more truffle trees into thneeds which everyone EVERYONE EVERYONE needs</blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>"I repeat" cried the Lorax, "I speak for the trees"</blockquote>
+                    </section>
+                </section>
+
+                <!-- Monitoring & Policies -->
+				<section>
+                    <section>
+                        <h1>How to deal with technical debt</h1>
+                    </section>
+
+                    <section>
+                        <h1>Code quality tools</h1>
+                    </section>
+
+                    <section>
+                        <h1>Code quality metrics</h1>
+                    </section>
+
+                    <section>
+                        <h1>code examples</h1>
+                    </section>
+
+                    <section>
+                        <blockquote>"Look, Lorax" I said. "There"s no cause for alarm. I chopped just one tree. I am doing no harm. I am being quite useful. This thing is a Thneed. A Thneed is a Fine-Something-That-All-People-Need!"</blockquote>
+                    </section>
+
+
+
+                    <!-- points: -->
+                    <section>
+                    good software architecture
+                        Learning good software design patterns.
+                        Learn how to separate business logic from your framework (domain vs application).
+                    </section>
+
+                    <section>
+                    Using a CI system to send alerts for these metrics: code style, test fails, etc. (code climate, coveralls, travis)
+                        Implement quality testing strategies
+                        Learn testing strategies.
+                        Establish testing strategies / objectives up from and iterate over them. Tests aren’t always relevant over the course of the full project.
+                        Mess / cruft as a critical bug (LISTEN TO PHPMD!!!)
+                    </section>
+
+                    <section>
+                    use logging and monitoring
+                        Using logging in your system that give humans visibility over what is going on.
+                        Using monitoring of the system, such as performance benchmarks.
+                    </section>
+
+                    <section>
+                    Build refactor time into your development cycle: “An excellent time to refactor code is right before you extend it.” http://c2.com/cgi/wiki?TechnicalDebt 
+                        Note: this refactor time should include audit of architecture, of testing strategy, of CI tools, basically improve anything that helps mitigate against tech debt
+                        (consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)
+                        use Andrea’s numbers about 1 day = like 40% fewer bugs
+                    </section>
+
+                    <section>
+                    Establish a good PR review process.
+                        Consider lack of or inaccurate documentation as a critical bug
+                    </section>
+
+                    <section>
+                    Build a culture that doesn’t transfer business pressures to the development cycle.
+                        this is where a good project manager buffers: only let the important things through (implication: you have to know what is important to communicate)
+                        tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!
+                    </section>
+
+                    Note: the practices that cause pollution are not mutually exclusive to those that mitigate, and sometimes they are required, e.g. agile.
+
+
+
+
+
 				</section>
+
+
+                <!-- Unless -->
+				<section>
+                    <section>
+                        <h1>Unless...</h1>
+                    </section>
+
+                    <section>
+                        <img src="http://placehold.it/100x100" alt="unless stone image">
+                    </section>
+
+                    <section>
+                        <blockquote>Unless someone like you carse a whole awful lot nothing is going to get better its not</blockquote>
+                    </section>
+                </section>
 			</div>
 
 		</div>
