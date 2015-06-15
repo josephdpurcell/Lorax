@@ -58,13 +58,18 @@
 
                     <!-- Overview (tell em what youre gonna tell em) -->
                     <section>
-                        <!--  Technical debt is analogous to environmental pollution and should be monitored and mitigated using similar principles. ?? -->
-                        <h1>Unless someone like you cares a whole awful lot its not going to get better its not.</h1>
-                        <ul>
-                            <li>Symptoms</li>
-                            <li>Causes</li>
-                            <li>Monitoring &amp; Policies</li>
-                        </ul>
+                        <!-- thesis -->
+                        <blockquote>Unless someone like you cares a whole awful lot its not going to get better its not.</blockquote>
+                    </section>
+
+                    <section>
+                        <!-- supporting points -->
+                        <h1>Overview</h1>
+                        <ol>
+                            <li>What is technical debt?</li>
+                            <li>What causes technical debt?</li>
+                            <li>How do you deal with technical debt?</li>
+                        </ol>
                     </section>
                 </section>
 
@@ -75,22 +80,37 @@
                     </section>
 
                     <section>
-                        Context was agile: “We developed the product by incremental growth from a working prototype” (<a href="http://c2.com/doc/oopsla92.html">link</a>)
+                        <blockquote>"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite." (<a href="http://c2.com/doc/oopsla92.html">Cunningham Ward</a>)</blockquote>
+
+                        <aside class="notes">
+                            Context was agile on financial portfolio software: "We developed the product by incremental growth from a working prototype"
+
+                            This is good!
+                        </aside>
                     </section>
 
                     <section>
-                        Analogy: “Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite.” (<a href="http://c2.com/doc/oopsla92.html">link</a>)
-                    </section>
+                        <blockquote>"The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt." (<a href="http://c2.com/doc/oopsla92.html">Cunningham Ward</a>)</blockquote>
 
-                    <section>
-                        <h1>Monetary vs Environmental</h1>
-                        <!--
-                        The monetary analogy communicates the wrong idea about how technical debt is measured and how it impacts business.
-                        -->
+                        <aside class="notes">
+                            This is bad :(
+                        </aside>
                     </section>
 
                     <section>
                         <img src="http://www.andrejkoelewijn.com/blog/images/2010/11/20101125-092139.jpg" alt="tech debt grid">
+
+                        <aside class="notes">
+                            What a bug is to a feature, technical debt is to architecture.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Monetary vs Environmental</h1>
+
+                        <aside class="notes">
+                            The monetary analogy communicates the wrong idea about how technical debt is measured and how it impacts business.
+                        </aside>
                     </section>
 
                     <section>
@@ -105,61 +125,57 @@
                     </section>
 
 
-                    <!-- 5 points: -->
+                    <!-- 5 points: consider not reading the quotes; let them come to their own conclusions -->
 
                     <section>
-                        Writing code and merging it with no one seeing it.
+                        <blockquote>business is business and business must grow regardless of grummies in tummies, you know</blockquote>
+
+                        <aside class="notes">
+                            Writing code and merging it with no one seeing it.
+                        </aside>
                     </section>
 
                     <section>
-                        Writing custom code that doesn’t follow standards, code style guidelines, design patterns, framework conventions, documentation, etc.
+                        <blockquote>I laughed at the Lorax, "You poor stupid guy! You never can tell what some people will buy!"</blockquote>
+
+                        <aside class="notes">
+                            Writing custom code that doesn’t follow standards, code style guidelines, design patterns, framework conventions, documentation, etc.
+                        </aside>
                     </section>
 
                     <section>
-                        Business pressures:
-                            releasing sooner before all necessary changes are complete.
-                            When businesses make decisions without considering the technical implications.
-                            When business requirements are not properly communicated to and understood by developers.
-                            When business requirements change after implementation.
-                            Delaying refactoring.
+                        <blockquote>And FYI you Lorax, I'm figgering on biggering and biggering and BIGGERING and BIGGERING. turning more truffle trees into thneeds which everyone EVERYONE EVERYONE needs</blockquote>
+
+                        <aside class="notes">
+                            Business pressures:
+                            <ul>
+                                <li>releasing sooner before all necessary changes are complete.</li>
+                                <li>When businesses make decisions without considering the technical implications.</li>
+                                <li>When business requirements are not properly communicated to and understood by developers.</li>
+                                <li>When business requirements change after implementation.</li>
+                                <li>Delaying refactoring.</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
                         Building monolithic architectures can result in close coupling and fail to meet the flexibility needed for changing business requirements.
+
+                        @todo find quotes
                     </section>
 
                     <section>
                         Parallel development risks implementing the wrong architecture. When the code is merged and/or integrated, tech debt may surface.
                             INSERT MYTHICAL MAN MONTH QUOTE - the idea that you can 
-                    </section>
 
-                    <!-- end 5 points -->
-
-
-
-
-
-
-
-
-
-
-                    <!-- quotes to use -->
-
-                    <section>
-                        <blockquote>I laughed at the Lorax, "You poor stupid guy! You never can tell what some people will buy!"</blockquote>
-                    </section>
-
-                    <section>
-                        <blockquote>business is business and business must grow regardless of grummies in tummies, you know</blockquote>
-                    </section>
-
-                    <section>
-                        <blockquote>And FYI you Lorax, I'm figgering on biggering and biggering and BIGGERING and BIGGERING. turning more truffle trees into thneeds which everyone EVERYONE EVERYONE needs</blockquote>
+                        @todo find quotes
                     </section>
 
                     <section>
                         <blockquote>"I repeat" cried the Lorax, "I speak for the trees"</blockquote>
+                        <aside class="notes">
+                            Transition slide
+                        </aside>
                     </section>
                 </section>
 
@@ -226,9 +242,9 @@
                         tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!
                     </section>
 
-                    Note: the practices that cause pollution are not mutually exclusive to those that mitigate, and sometimes they are required, e.g. agile.
-
-
+                    <section>
+                        Note: the practices that cause pollution are not mutually exclusive to those that mitigate, and sometimes they are required, e.g. agile.
+                    </section>
 
 
 
