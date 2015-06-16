@@ -183,73 +183,123 @@
 				<section>
                     <section>
                         <h1>How to deal with technical debt</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Note: the practices that cause pollution are not mutually exclusive to those that mitigate, and sometimes they are required, e.g. agile.</li>
+                                <li>You will never be so good that you don't have tech debt. You will have it, and you need to learn how to deal with it.</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
-                        <h1>Code quality tools</h1>
+                        <!-- treat it with care / grow it -->
+                        <h1>Design Patterns</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>good software architecture</li>
+                                <li>Learning good software design patterns.</li>
+                                <li>Learn how to separate business logic from your framework (domain vs application).</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
-                        <h1>Code quality metrics</h1>
+                        <h1>Plan to Refactor</h1>
+
+                        <blockquote>"An excellent time to refactor code is right before you extend it." (<a href="http://c2.com/cgi/wiki?TechnicalDebt">Cunningham Ward</a>)</li>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Build refactor time into your development cycle.</li>
+                                <li>Note: this refactor time should include audit of architecture, of testing strategy, of CI tools, basically improve anything that helps mitigate against tech debt</li>
+                                <li> (consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)</li>
+                                <li> use Andrea’s numbers about 1 day = like 40% fewer bugs</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
-                        <h1>code examples</h1>
+                        <h1>Test Driven Development (TDD)</h1>
+
+                        <blockquote>
+                            "the pre-release defect density of the four products decreased between 40% and 90% relative to similar projects that did not use the TDD practice. Subjectively, the teams experienced a 15–35% increase in initial development time after adopting TDD." ("<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>", Empirical Software Engineering 2008)
+                        </blockquote>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>BDD ftw!</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
+                        <h1>Culture</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>BDD develops a way to pass on business value without passing on business pressure</li>
+                                <li>Build a culture that doesn’t transfer business pressures to the development cycle.</li>
+                                <li>this is where a good project manager buffers: only let the important things through (implication: you have to know what is important to communicate)</li>
+                                <li>tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <!-- protect from axes that hack -->
+                        <h1>Continuous Integration</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Using a CI system to send alerts for these metrics: code style, test fails, etc. (code climate, coveralls, travis)
+                                    <ul>
+                                        <li>Implement quality testing strategies</li>
+                                        <li>Learn testing strategies.</li>
+                                        <li>Establish testing strategies / objectives up from and iterate over them. Tests aren’t always relevant over the course of the full project.</li>
+                                        <li>Mess / cruft as a critical bug (LISTEN TO PHPMD!!!)</li>
+                                        <li>code quality tools</li>
+                                        <li>Code quality metrics</li>
+                                        <li>code examples</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>PR Review</h1>
+
                         <blockquote>"Look, Lorax" I said. "There"s no cause for alarm. I chopped just one tree. I am doing no harm. I am being quite useful. This thing is a Thneed. A Thneed is a Fine-Something-That-All-People-Need!"</blockquote>
-                    </section>
 
-
-
-                    <!-- points: -->
-                    <section>
-                    good software architecture
-                        Learning good software design patterns.
-                        Learn how to separate business logic from your framework (domain vs application).
-                    </section>
-
-                    <section>
-                    Using a CI system to send alerts for these metrics: code style, test fails, etc. (code climate, coveralls, travis)
-                        Implement quality testing strategies
-                        Learn testing strategies.
-                        Establish testing strategies / objectives up from and iterate over them. Tests aren’t always relevant over the course of the full project.
-                        Mess / cruft as a critical bug (LISTEN TO PHPMD!!!)
+                        <aside class="notes">
+                            <ul>
+                                <li>Establish a good PR review process.</li>
+                                <li>Consider lack of or inaccurate documentation as a critical bug</li>
+                                <li>This is a great transition into: Unless you care as the reviewer; this is the final check.</li>
+                                <li>If you let pass even just one "not-quite-right code", you can get into a slippery slope.</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
-                    use logging and monitoring
-                        Using logging in your system that give humans visibility over what is going on.
-                        Using monitoring of the system, such as performance benchmarks.
+                        <blockquote>
+                            You're in charge of the last of the Truffula Seeds.
+                            And Truffula Trees are what everyone needs.
+                            Plant a new Truffula. Treat it with care.
+                            Give it clean water. And feed it fresh air.
+                            Grow a forest. Protect it from axes that hack.
+                            Then the Lorax
+                            and all of his friends
+                            may come back.
+                        </blockquote>
+
+                        <aside class="notes">
+                            We have to cultivate good code.
+                        </aside>
                     </section>
-
-                    <section>
-                    Build refactor time into your development cycle: “An excellent time to refactor code is right before you extend it.” http://c2.com/cgi/wiki?TechnicalDebt 
-                        Note: this refactor time should include audit of architecture, of testing strategy, of CI tools, basically improve anything that helps mitigate against tech debt
-                        (consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)
-                        use Andrea’s numbers about 1 day = like 40% fewer bugs
-                    </section>
-
-                    <section>
-                    Establish a good PR review process.
-                        Consider lack of or inaccurate documentation as a critical bug
-                    </section>
-
-                    <section>
-                    Build a culture that doesn’t transfer business pressures to the development cycle.
-                        this is where a good project manager buffers: only let the important things through (implication: you have to know what is important to communicate)
-                        tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!
-                    </section>
-
-                    <section>
-                        Note: the practices that cause pollution are not mutually exclusive to those that mitigate, and sometimes they are required, e.g. agile.
-                    </section>
-
-
-
 				</section>
-
 
                 <!-- Unless -->
 				<section>
