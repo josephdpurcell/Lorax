@@ -85,22 +85,58 @@
                         </aside>
                     </section>
 
+                    <!-- supporting points -->
+                    <section data-background="http://i.huffpost.com/gadgets/slideshows/328204/slide_328204_3186483_free.jpg">
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Joe</li>
+                                <li>goal: bring the Lorax to reality and set the stage for framing the discussion in environmental terms</li>
+                                <li>"smog" was coined in London, not LA</li>
+                                <li>in 1800s millions burned coal for fuel</li>
+                                <li>no accessible / easy alternative fuels</li>
+                                <li>"To be against coal burning was to be against progress." (source: <a href="http://www2.epa.gov/aboutepa/londons-historic-pea-soupers">EPA article</a>)</li>
+                                <li>bandaids: masks, detonators on train lines, traffic flares</li>
+                                <li>In 1952, Great London Smog: 4,000 people died.</li>
+                                <li>Worst air pollution event in UK history</li>
+                            </ul>
+                        </aside>
+                    </section>
+
                     <section>
-                        <!-- supporting points -->
+                        <h1>Great Smog of '52</h1>
+                        <ol>
+                            <li>Symptoms: illness, no transit</li>
+                            <li>Causes: burning dirty coal</li>
+                            <li>Policies: 1956 Clean Air Act</li>
+                        </ol>
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Joe</li>
+                                <li>
+                                    <ol>
+                                        <li>use clean coal, electricity, and gas to fuel homes</li>
+                                        <li>increase and regulate the height of chimneys</li>
+                                        <li>relocate power plants away from cities</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
                         <h1>Overview</h1>
                         <ol>
                             <li>What is technical debt?</li>
                             <li>What causes technical debt?</li>
                             <li>How do you deal with technical debt?</li>
                         </ol>
-
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
-                                <li>London Fog story</li>
                             </ul>
                         </aside>
                     </section>
+
                 </section>
 
                 <!-- Symptoms -->
@@ -119,9 +155,11 @@
                         <blockquote>"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite." (<a href="http://c2.com/doc/oopsla92.html">Cunningham Ward</a>)</blockquote>
 
                         <aside class="notes">
-                            Context was agile on financial portfolio software: "We developed the product by incremental growth from a working prototype"
-
-                            This is good!
+                            <ul>
+                                <li>Context was agile on financial portfolio software: "We developed the product by incremental growth from a working prototype"</li>
+                                <li>Point: defer effort to a future time for the benefit of releasing early</li>
+                                <li>This is good!</li>
+                            </ul>
                         </aside>
                     </section>
 
@@ -129,8 +167,23 @@
                         <blockquote>"The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt." (<a href="http://c2.com/doc/oopsla92.html">Cunningham Ward</a>)</blockquote>
 
                         <aside class="notes">
-                            use clean code image from pg 4
-                            This is bad :(
+                            <ul>
+                                <li>Point: writing code dependent on not-quite-right code increases the amount of deferred effort</li>
+                                <li>This is bad :(</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <img src="http://blog.claudiupersoiu.ro/wp-content/uploads/2011/08/DSC_3540_2.jpg" />
+                        <p>Source: "Clean Code" by Robert C. Martin</p>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Point: Clean Code puts it this way: productivity decreases over time</li>
+                                <li>Agile is prone to YAGNI (You Ain’t Gonna Need It)</li>
+                                <li>sprint myopia</li>
+                            </ul>
                         </aside>
                     </section>
 
@@ -138,20 +191,62 @@
                         <img src="http://www.andrejkoelewijn.com/blog/images/2010/11/20101125-092139.jpg" alt="tech debt grid">
 
                         <aside class="notes">
-                            What a bug is to a feature, technical debt is to architecture.
+                            <li>Point: technical debt is invisible architectural or code quality problems</li>
+                            <li>"<a href="https://pkruchten.files.wordpress.com/2013/12/kruchten-colours-yow-sydney.pdf">What color is your backlog?</a>" by Philippe Kruchten</li>
+                            <li>Total effort (backlog) over the lifetime of a project includes these four areas</li>
+                            <li>Features and Architecture will be in release plans</li>
+                            <li>Bugs and Tech Debt do not</li>
+                            <li>Bugs get prioritized because they are visible defects</li>
+                            <li>Tech Debt is invisible and while 
                         </aside>
                     </section>
 
                     <section>
-                        <h1>Monetary vs Environmental</h1>
+                        <h1>Monetary <p>vs</p> Environmental</h1>
 
                         <aside class="notes">
-                            The monetary analogy communicates the wrong idea about how technical debt is measured and how it impacts business.
+                            <ul>
+                                <li>Point: The monetary analogy communicates the wrong idea about how technical debt is measured and how it impacts business.</li>
+                                <li>Why is it a problem to compare tech to money?</li>
+                                <li>Money is a common exchange of value; translation code is a common exchange of effort</li>
+                                <li>Logical conclusions for a business person:
+                                    <ul>
+                                        <li>tech debt = LOC per person per hour * # of persons</li>
+                                        <li>If I know how much effort per line of code I know the cost.</li>
+                                        <li>I should be able to ask questions like:
+                                            <ol>
+                                                <li>Where is the technical debt?</li>
+                                                <li>How much do we owe?</li>
+                                                <li>How much is it costing us in interest repayments?</li>
+                                                <li>How long will it take to repay?</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>These are easy questions in the financial world because we have bank statements and balance sheets readily available to quantify monetary debt, and there is an exact tradeoff between spending income on debt versus new assets.</li>
+                                <li>In the tech world, we are still defining what good code is and there are contextual nuances that prevent consensus.</li>
+                                <li>When pitting working on tech debt versus new features, clients expect to know the cost-benefit analysis, because it must compare to money.</li>
+                                <li>Monetary debt is discrete and quantifiable, whereas technical debt is connected and qualitative.</li>
+                                <li>It's ok to default on tech debt, but not money. (<a href="http://blogs.perl.org/users/ovid/2011/11/technical-debt-when-metaphors-go-wrong.html">source</a>)</li>
+                                <li>Monetary debt has a schedule for repayment, but not tech debt. (<a href="http://blogs.perl.org/users/ovid/2011/11/technical-debt-when-metaphors-go-wrong.html">source</a>)</li>
+                                <!-- Technical Debt is the difference between your current understanding of the domain and the understanding that is reflected in the current version of the software. http://programmers.stackexchange.com/a/270037 -->
+                            </ul>
                         </aside>
                     </section>
 
                     <section>
-                        <blockquote>I am the Lorax. I speak for the trees for the trees have no tongues.</blockquote>
+                        <blockquote>
+                            I am the Lorax. I speak for the trees.<br>
+                            I speak for the trees, for the trees have no tongues.
+                        </blockquote>
+                        <aside class="notes">
+                            <ul>
+                                <li>Monetary debt is not an edgy topic: it's well understood in our society.</li>
+                                <li>Environmental pollution is an edgy topic because it is extremely difficult to quantify the business impact and motivate change.</li>
+                                <li>Technical debt likewise is edgy because it is extremely difficult to quantify the business impact and motivate change.</li>
+                                <li>The environment has no voice, and neither does code.</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
@@ -252,10 +347,12 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
-                                <li>BDD develops a way to pass on business value without passing on business pressure</li>
-                                <li>Build a culture that doesn’t transfer business pressures to the development cycle.</li>
-                                <li>this is where a good project manager buffers: only let the important things through (implication: you have to know what is important to communicate)</li>
-                                <li>tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!</li>
+                                <li>Technical debt needs to be in your vocabulary.</li>
+                                <li>Being a "green" company requires everyone on board, especially leadership.</li>
+                                <li>PMs: protect the focus of your team, don't let business pressure impact your team</li>
+                                <li>BDD develops a way to pass on business value without passing on business pressure; you now have a culture that speaks Gherkin</li>
+                                <li>PMs: Enable your coding Lorax to have influence over business decisions.</li>
+                                <li>Loraxes, understand that everyone thinks they need a Thneed.</li>
                             </ul>
                         </aside>
                     </section>
@@ -282,10 +379,13 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
+                                <li>Agile is prone to YAGNI</li>
+                                <li>Problem: if you start with a bicycle, you can't iterate to a race car. You need a rewrite.</li>
                                 <li>Build refactor time into your development cycle.</li>
-                                <li>Note: this refactor time should include audit of architecture, of testing strategy, of CI tools, basically improve anything that helps mitigate against tech debt</li>
-                                <li> (consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)</li>
-                                <li> use Andrea’s numbers about 1 day = like 40% fewer bugs</li>
+                                <li>Use refactor time should include audit of architecture, of testing strategy, of CI tools, etc</li>
+                                <!--
+                                <li>(consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)</li>
+                                -->
                             </ul>
                         </aside>
                     </section>
@@ -312,6 +412,7 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
+                                <li>Point: prevent pollution at the source</li>
                                 <li>Using a CI system to send alerts for these metrics: code style, test fails, etc. (code climate, coveralls, travis)
                                     <ul>
                                         <li>Implement quality testing strategies</li>
@@ -356,22 +457,22 @@
 
                 <!-- Conclusion: Unless -->
 				<section>
-                    <blockquote>
-                        You're in charge of the last of the Truffula Seeds.
-                        And Truffula Trees are what everyone needs.
-                        Plant a new Truffula. Treat it with care.
-                        Give it clean water. And feed it fresh air.
-                        Grow a forest. Protect it from axes that hack.
-                        Then the Lorax
-                        and all of his friends
-                        may come back.
+                    <blockquote style="font-size:98%">
+                        <!--You're in charge of the last of the Truffula Seeds.<br>
+                        And -->Truffula Trees are what everyone needs.<br>
+                        Plant a new Truffula. Treat it with care.<br>
+                        Give it clean water. And feed it fresh air.<br>
+                        Grow a forest. Protect it from axes that hack.<br>
+                        Then the Lorax<br>
+                        and all of his friends<br>
+                        may come back.<br>
                     </blockquote>
 
                     <aside class="notes">
                         <ul>
                             <li>Presenter: Joe</li>
-                            <li>We have to cultivate good code.</li>
-                            <li>Refer to London Fog</li>
+                            <li>Point: cultivate an environment of good code.</li>
+                            <li>London smog isn't eliminated by a loan or a default</li>
                             <li>The monetary analogy communicates the wrong idea</li>
                             <li>managing your code is more like a garden than your bank account.</li>
                         </ul>
