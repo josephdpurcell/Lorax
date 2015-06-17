@@ -46,20 +46,43 @@
                     <section>
                         <h1>Technical Debt</h1>
                         <h3>Insights from the Lorax</h3>
+
+                        <aside class="notes">
+                            Presenter: Andrea
+                        </aside>
                     </section>
 
                     <section>
                         <h1>Who are we?</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Andrea then Joe</li>
+                                <li>@todo Who is Palantir?</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
                         <h1>Who are you?</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Andrea</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <!-- Overview (tell em what youre gonna tell em) -->
                     <section>
                         <!-- thesis -->
                         <blockquote>Unless someone like you cares a whole awful lot its not going to get better its not.</blockquote>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Andrea</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
@@ -70,6 +93,13 @@
                             <li>What causes technical debt?</li>
                             <li>How do you deal with technical debt?</li>
                         </ol>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Joe</li>
+                                <li>London Fog story</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
@@ -77,6 +107,12 @@
 				<section>
                     <section>
                         <h1>What is technical debt?</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Joe for this entire section</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
@@ -93,6 +129,7 @@
                         <blockquote>"The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt." (<a href="http://c2.com/doc/oopsla92.html">Cunningham Ward</a>)</blockquote>
 
                         <aside class="notes">
+                            use clean code image from pg 4
                             This is bad :(
                         </aside>
                     </section>
@@ -122,6 +159,12 @@
 				<section>
                     <section>
                         <h1>Causes of technical debt</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Andrea for this entire section</li>
+                            </ul>
+                        </aside>
                     </section>
 
 
@@ -159,16 +202,26 @@
                     </section>
 
                     <section>
-                        Building monolithic architectures can result in close coupling and fail to meet the flexibility needed for changing business requirements.
-
                         @todo find quotes
+
+                        <aside class="notes">
+                            <ul>
+                                <li>bad architecture</li>
+                                <li>Building monolithic architectures can result in close coupling and fail to meet the flexibility needed for changing business requirements.</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
-                        Parallel development risks implementing the wrong architecture. When the code is merged and/or integrated, tech debt may surface.
-                            INSERT MYTHICAL MAN MONTH QUOTE - the idea that you can 
-
+                        swim lanes <br>
                         @todo find quotes
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Parallel development risks implementing the wrong architecture. When the code is merged and/or integrated, tech debt may surface.</li>
+                                <li>INSERT MYTHICAL MAN MONTH QUOTE - the idea that you can speed up dev with more peopl</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
@@ -186,8 +239,23 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>Presenter: Andrea</li>
                                 <li>Note: the practices that cause pollution are not mutually exclusive to those that mitigate, and sometimes they are required, e.g. agile.</li>
                                 <li>You will never be so good that you don't have tech debt. You will have it, and you need to learn how to deal with it.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Culture</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Presenter: Joe</li>
+                                <li>BDD develops a way to pass on business value without passing on business pressure</li>
+                                <li>Build a culture that doesn’t transfer business pressures to the development cycle.</li>
+                                <li>this is where a good project manager buffers: only let the important things through (implication: you have to know what is important to communicate)</li>
+                                <li>tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!</li>
                             </ul>
                         </aside>
                     </section>
@@ -198,6 +266,7 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>Presenter: Andrea</li>
                                 <li>good software architecture</li>
                                 <li>Learning good software design patterns.</li>
                                 <li>Learn how to separate business logic from your framework (domain vs application).</li>
@@ -212,6 +281,7 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>Presenter: Joe</li>
                                 <li>Build refactor time into your development cycle.</li>
                                 <li>Note: this refactor time should include audit of architecture, of testing strategy, of CI tools, basically improve anything that helps mitigate against tech debt</li>
                                 <li> (consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)</li>
@@ -229,20 +299,8 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>Presenter: Andrea</li>
                                 <li>BDD ftw!</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Culture</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>BDD develops a way to pass on business value without passing on business pressure</li>
-                                <li>Build a culture that doesn’t transfer business pressures to the development cycle.</li>
-                                <li>this is where a good project manager buffers: only let the important things through (implication: you have to know what is important to communicate)</li>
-                                <li>tech lead != product owner: the one deciding what is important to the business should not also be the one who knows how it is built; you need someone who can write down the business requirements--THIS IS THE POWA OF BEHAVIORAL TESTING!!!! MUAHAHAHAHAHA!!!! Gerkin ftw!!</li>
                             </ul>
                         </aside>
                     </section>
@@ -253,6 +311,7 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>Presenter: Joe</li>
                                 <li>Using a CI system to send alerts for these metrics: code style, test fails, etc. (code climate, coveralls, travis)
                                     <ul>
                                         <li>Implement quality testing strategies</li>
@@ -275,6 +334,7 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>Presenter: Andrea</li>
                                 <li>Establish a good PR review process.</li>
                                 <li>Consider lack of or inaccurate documentation as a critical bug</li>
                                 <li>This is a great transition into: Unless you care as the reviewer; this is the final check.</li>
@@ -284,36 +344,47 @@
                     </section>
 
                     <section>
-                        <blockquote>
-                            You're in charge of the last of the Truffula Seeds.
-                            And Truffula Trees are what everyone needs.
-                            Plant a new Truffula. Treat it with care.
-                            Give it clean water. And feed it fresh air.
-                            Grow a forest. Protect it from axes that hack.
-                            Then the Lorax
-                            and all of his friends
-                            may come back.
-                        </blockquote>
+                        <blockquote>Unless someone like you carse a whole awful lot nothing is going to get better its not</blockquote>
 
                         <aside class="notes">
-                            We have to cultivate good code.
+                            <ul>
+                                <li>Presenter: Andrea</li>
+                            </ul>
                         </aside>
                     </section>
 				</section>
 
-                <!-- Unless -->
+                <!-- Conclusion: Unless -->
 				<section>
-                    <section>
-                        <h1>Unless...</h1>
-                    </section>
+                    <blockquote>
+                        You're in charge of the last of the Truffula Seeds.
+                        And Truffula Trees are what everyone needs.
+                        Plant a new Truffula. Treat it with care.
+                        Give it clean water. And feed it fresh air.
+                        Grow a forest. Protect it from axes that hack.
+                        Then the Lorax
+                        and all of his friends
+                        may come back.
+                    </blockquote>
 
-                    <section>
-                        <img src="http://placehold.it/100x100" alt="unless stone image">
-                    </section>
+                    <aside class="notes">
+                        <ul>
+                            <li>Presenter: Joe</li>
+                            <li>We have to cultivate good code.</li>
+                            <li>Refer to London Fog</li>
+                            <li>The monetary analogy communicates the wrong idea</li>
+                            <li>managing your code is more like a garden than your bank account.</li>
+                        </ul>
+                    </aside>
+                </section>
 
-                    <section>
-                        <blockquote>Unless someone like you carse a whole awful lot nothing is going to get better its not</blockquote>
-                    </section>
+				<section>
+                    <h1>Questions?</h1>
+                </section>
+
+				<section>
+                    <h1>Thank You!</h1>
+                    @todo get link to review our session
                 </section>
 			</div>
 
