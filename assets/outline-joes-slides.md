@@ -69,7 +69,7 @@ This is an outline of notes for Joe's slides:
         * If you take on debt, you have to repay it.
 * slide: tech debt quadrant
     * There has been debate about what exactly is "not-quite-right code".
-    * Cunningham Ward admitted that there has been some confusion that technical debt can be cruft, that is you can write code badly and fix it later and that's OK ([source](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor)).
+    * Ward Cunningham admitted that there has been some confusion that technical debt can be cruft, that is you can write code badly and fix it later and that's OK ([source](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor)).
     * His opinion is that no, your code should always be clean enough to be able to refactor. There are those who back the stance that cruft is not debt.
     * However, let's be practical. Messy code acts the same as other forms of technical debt.
     * It doesn't matter whether its cruft or not, you still have code that isn't right that requires effort to fix. Cruft happens.
@@ -148,5 +148,7 @@ TODO:
 use these somewhere:
 
 * I like how one person put it, "We have defeated one problem only to create another, and like the government of 1952 this one has yet to come to terms with the problem," [source](http://www.theguardian.com/uk_news/story/0,3604,850909,00.html)
-* https://resources.sei.cmu.edu/asset_files/Webinar/2012_018_101_24291.pdf
 * Technical Debt is the difference between your current understanding of the domain and the understanding that is reflected in the current version of the software. http://programmers.stackexchange.com/a/270037
+* Further Reading list:
+    * https://pkruchten.files.wordpress.com/2013/12/kruchten-colours-yow-sydney.pdf
+    * https://resources.sei.cmu.edu/asset_files/Webinar/2012_018_101_24291.pdf
