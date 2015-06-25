@@ -266,6 +266,18 @@
 
                     <section>
                         <blockquote>
+                            Managing your code is more like a garden than your bank account.
+                        </blockquote>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>London smog isn't eliminated by a loan or a default</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <blockquote>
                             I am the Lorax. I speak for the trees.<br>
                             I speak for the trees, for the trees have no tongues.
                         </blockquote>
@@ -373,15 +385,58 @@
                     <section>
                         <h1>Culture</h1>
 
+                        <blockquote>
+                            Being "green" requires everyone on board, especially leadership.
+                        </blockquote>
+
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe</li>
-                                <li>Technical debt needs to be in your vocabulary.</li>
-                                <li>Being a "green" company requires everyone on board, especially leadership.</li>
-                                <li>PMs: protect the focus of your team, don't let business pressure impact your team</li>
-                                <li>BDD develops a way to pass on business value without passing on business pressure; you now have a culture that speaks Gherkin</li>
-                                <li>PMs: Enable your coding Lorax to have influence over business decisions.</li>
-                                <li>Loraxes, understand that everyone thinks they need a Thneed.</li>
+                                <!--<li>Presenter: Joe</li>-->
+                                <li>Palantir: button dividers, zero-emission furniture, recycling, garden, bike</li>
+                                <li>Communicating invisible negative value to stakeholders requires the backing of your company from the top down.</li>
+                                <li>Cultivate an environment of good code.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Culture</h1>
+
+                        <blockquote>
+                            BDD language communicate business requirements without the business pressure (e.g. Gherkin).
+                        </blockquote>
+
+                        <aside class="notes">
+                            <ul>
+                                <!--<li>Presenter: Joe</li>-->
+                                <li>BDD keeps it formal</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Culture</h1>
+
+                        <blockquote>
+                            PM's need to support their Lorax.
+                        </blockquote>
+                        <aside class="notes">
+                            <ul>
+                                <!--<li>Presenter: Joe</li>-->
+                                <li>Enable Lorax to influence business decisions</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Culture</h1>
+
+                        <blockquote>
+                            PM's need to protect the focus of your team. Keep business pressure out.
+                        </blockquote>
+                        <aside class="notes">
+                            <ul>
+                                <!--<li>Presenter: Joe</li>-->
                             </ul>
                         </aside>
                     </section>
@@ -403,18 +458,32 @@
                     <section>
                         <h1>Plan to Refactor</h1>
 
-                        <blockquote>"An excellent time to refactor code is right before you extend it." (<a href="http://c2.com/cgi/wiki?TechnicalDebt">Ward Cunningham</a>)</li>
+                        <blockquote>
+                            Agile is prone to technical debt<br>because of YAGNI.
+                        </blockquote>
 
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe</li>
-                                <li>Agile is prone to YAGNI</li>
-                                <li>Problem: if you start with a bicycle, you can't iterate to a race car. You need a rewrite.</li>
+                                <!--<li>Presenter: Joe</li>-->
+                                <li>architecture and agile are oil and water (Kruchten)</li>
+                                <li>If you start with a bicycle, you can't iterate to a race car. You need a rewrite.</li>
+                                <li>tradeoff of BUFD vs pivoting</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Plan to Refactor</h1>
+
+                        <blockquote>
+                            "An excellent time to refactor code is right before you extend it." (<a href="http://c2.com/cgi/wiki?TechnicalDebt">Ward Cunningham</a>)
+                        </blockquote>
+
+                        <aside class="notes">
+                            <ul>
+                                <!--<li>Presenter: Joe</li>-->
                                 <li>Build refactor time into your development cycle.</li>
-                                <li>Use refactor time should include audit of architecture, of testing strategy, of CI tools, etc</li>
-                                <!--
-                                <li>(consider production vs production capacity image with the goose that lays golden eggs; this is from a book…)</li>
-                                -->
+                                <li>Consider adding refactor buffers into work estimates.</li>
                             </ul>
                         </aside>
                     </section>
@@ -438,21 +507,38 @@
                         <!-- protect from axes that hack -->
                         <h1>Continuous Integration</h1>
 
+                        <blockquote>
+                            Prevent pollution at the source.
+                        </blockquote>
+
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe</li>
-                                <li>Point: prevent pollution at the source</li>
-                                <li>Using a CI system to send alerts for these metrics: code style, test fails, etc. (code climate, coveralls, travis)
-                                    <ul>
-                                        <li>Implement quality testing strategies</li>
-                                        <li>Learn testing strategies.</li>
-                                        <li>Establish testing strategies / objectives up from and iterate over them. Tests aren’t always relevant over the course of the full project.</li>
-                                        <li>Mess / cruft as a critical bug (LISTEN TO PHPMD!!!)</li>
-                                        <li>code quality tools</li>
-                                        <li>Code quality metrics</li>
-                                        <li>code examples</li>
-                                    </ul>
-                                </li>
+                                <!--<li>Presenter: Joe</li>-->
+                                <li>analogy: coal scrubbers</li>
+                                <li>configure IDE to throw errors</li>
+                                <li>use Git hooks</li>
+                                <li>use a CI system to send alerts when code fails quality metrics</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Continuous Integration</h1>
+
+                        <blockquote>
+                            Define quality and<br>the tolerance level of pollution.<br>
+                            (See <a href="http://phpqatools.org/">phpqatools.org</a> and <a href="http://www.phpmetrics.org/">phpmetrics.org</a>)
+                        </blockquote>
+
+                        <aside class="notes">
+                            <ul>
+                                <!--<li>Presenter: Joe</li>-->
+                                <li>phpcs: Code style violations</li>
+                                <li>phpdcd: Dead code</li>
+                                <li>phpcpd: Copy and paste</li>
+                                <li>pdepend: Cyclomatic complexity (phpqatools)</li>
+                                <li>Listen to PHPMD! Integrate it with Travis</li>
+                                <li>Use CodeClimate or Scruitinizer</li>
                             </ul>
                         </aside>
                     </section>
@@ -483,30 +569,6 @@
                         </aside>
                     </section>
 				</section>
-
-                <!-- Conclusion: Unless -->
-				<section>
-                    <blockquote style="font-size:98%">
-                        <!--You're in charge of the last of the Truffula Seeds.<br>
-                        And -->Truffula Trees are what everyone needs.<br>
-                        Plant a new Truffula. Treat it with care.<br>
-                        Give it clean water. And feed it fresh air.<br>
-                        Grow a forest. Protect it from axes that hack.<br>
-                        Then the Lorax<br>
-                        and all of his friends<br>
-                        may come back.<br>
-                    </blockquote>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>Presenter: Joe</li>
-                            <li>Point: cultivate an environment of good code.</li>
-                            <li>London smog isn't eliminated by a loan or a default</li>
-                            <li>The monetary analogy communicates the wrong idea</li>
-                            <li>managing your code is more like a garden than your bank account.</li>
-                        </ul>
-                    </aside>
-                </section>
 
 				<section>
                     <h1>Questions?</h1>
