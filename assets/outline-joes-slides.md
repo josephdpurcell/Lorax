@@ -149,3 +149,4 @@ use these somewhere:
 
 * I like how one person put it, "We have defeated one problem only to create another, and like the government of 1952 this one has yet to come to terms with the problem," [source](http://www.theguardian.com/uk_news/story/0,3604,850909,00.html)
 * https://resources.sei.cmu.edu/asset_files/Webinar/2012_018_101_24291.pdf
+* Technical Debt is the difference between your current understanding of the domain and the understanding that is reflected in the current version of the software. http://programmers.stackexchange.com/a/270037
