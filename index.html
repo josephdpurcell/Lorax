@@ -59,6 +59,7 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Andrea then Joe</li>
+                                <li>Joe: webdev 2003, engineer @ p.net, inspired by cross-disp research</li>
                                 <li>@todo Who is Palantir?</li>
                             </ul>
                         </aside>
@@ -91,14 +92,9 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
-                                <li>goal: bring the Lorax to reality and set the stage for framing the discussion in environmental terms</li>
-                                <li>"smog" was coined in London, not LA</li>
-                                <li>in 1800s millions burned coal for fuel</li>
-                                <li>no accessible / easy alternative fuels</li>
-                                <li>"To be against coal burning was to be against progress." (source: <a href="http://www2.epa.gov/aboutepa/londons-historic-pea-soupers">EPA article</a>)</li>
-                                <li>bandaids: masks, detonators on train lines, traffic flares</li>
-                                <li>In 1952, Great London Smog: 4,000 people died.</li>
-                                <li>Worst air pollution event in UK history</li>
+                                <li>smog was coined in London, not LA</li>
+                                <li>no easy alternative, so they would cope; peppered moth</li>
+                                <li>to be against coal was to be against progress</li>
                             </ul>
                         </aside>
                     </section>
@@ -119,13 +115,8 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
-                                <li>
-                                    <ol>
-                                        <li>use clean coal, electricity, and gas to fuel homes</li>
-                                        <li>increase and regulate the height of chimneys</li>
-                                        <li>relocate power plants away from cities</li>
-                                    </ol>
-                                </li>
+                                <li>4,000 people died</li>
+                                <li>inspiration for modern environmental movement</li>
                             </ul>
                         </aside>
                     </section>
@@ -140,6 +131,9 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe</li>
+                                <li>relation to tech debt:</li>
+                                <li>1. monetary vs environmental</li>
+                                <li>2. approach the same way</li>
                             </ul>
                         </aside>
                     </section>
@@ -154,6 +148,8 @@
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Joe for this entire section</li>
+                                <li>original context</li>
+                                <li>analogy: iterating over a prototype</li>
                             </ul>
                         </aside>
                     </section>
@@ -163,8 +159,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Context was agile on financial portfolio software: "We developed the product by incremental growth from a working prototype"</li>
-                                <li>Point: defer effort to a future time for the benefit of releasing early</li>
+                                <li>delay effort to meet an objective</li>
                                 <li>This is good!</li>
                             </ul>
                         </aside>
@@ -175,7 +170,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Point: writing code dependent on not-quite-right code increases the amount of deferred effort</li>
+                                <li>danger of debt: cash flow</li>
                                 <li>This is bad :(</li>
                             </ul>
                         </aside>
@@ -186,6 +181,8 @@
 
                         <aside class="notes">
                             <ul>
+                                <li>what is "not-quite-right"?</li>
+                                <li>Martin Fowler: does debt describe what we observe?</li>
                             </ul>
                         </aside>
                     </section>
@@ -195,9 +192,9 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Point: Clean Code puts it this way: productivity decreases over time</li>
-                                <li>Agile is prone to YAGNI (You Ain’t Gonna Need It)</li>
-                                <li>sprint myopia</li>
+                                <li>debt payments vs building features</li>
+                                <li>Brook's law: adding manpower makes it worse</li>
+                                <li>contextualize tech debt with other effort</li>
                             </ul>
                         </aside>
                     </section>
@@ -206,13 +203,9 @@
                         <img src="assets/What_colour_is_your_backlog.svg" alt="Colour of a backlog are feature (green), architecture (blue), bug (red), and tech debt (yellow)"  />
 
                         <aside class="notes">
-                            <li>Point: technical debt is invisible architectural or code quality problems</li>
-                            <li>"<a href="https://pkruchten.files.wordpress.com/2013/12/kruchten-colours-yow-sydney.pdf">What color is your backlog?</a>" by Philippe Kruchten</li>
-                            <li>Total effort (backlog) over the lifetime of a project includes these four areas</li>
-                            <li>Features and Architecture will be in release plans</li>
-                            <li>Bugs and Tech Debt do not</li>
-                            <li>Bugs get prioritized because they are visible defects</li>
-                            <li>Tech Debt is invisible and while 
+                            <li>describe each quadrant</li>
+                            <li>why is tech debt neglected?</li>
+                            <li>why is it important?</li>
                         </aside>
                     </section>
 
@@ -224,6 +217,12 @@
                             <li class="fragment">Constant and expected impact? <span class="fragment">No.</span></li>
                             <li class="fragment">Simple to understand? <span class="fragment">No.</span></li>
                         </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>tech debt is the gap of effort between where the code should be and where it is</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
@@ -237,30 +236,9 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Point: The monetary analogy communicates the wrong idea about how technical debt is measured and how it impacts business.</li>
-                                <li>Why is it a problem to compare tech to money?</li>
-                                <li>Money is a common exchange of value; translation code is a common exchange of effort</li>
-                                <li>Logical conclusions for a business person:
-                                    <ul>
-                                        <li>tech debt = LOC per person per hour * # of persons</li>
-                                        <li>If I know how much effort per line of code I know the cost.</li>
-                                        <li>I should be able to ask questions like:
-                                            <ol>
-                                                <li>Where is the technical debt?</li>
-                                                <li>How much do we owe?</li>
-                                                <li>How much is it costing us in interest repayments?</li>
-                                                <li>How long will it take to repay?</li>
-                                            </ol>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>These are easy questions in the financial world because we have bank statements and balance sheets readily available to quantify monetary debt, and there is an exact tradeoff between spending income on debt versus new assets.</li>
-                                <li>In the tech world, we are still defining what good code is and there are contextual nuances that prevent consensus.</li>
-                                <li>When pitting working on tech debt versus new features, clients expect to know the cost-benefit analysis, because it must compare to money.</li>
-                                <li>Monetary debt is discrete and quantifiable, whereas technical debt is connected and qualitative.</li>
-                                <li>It's ok to default on tech debt, but not money. (<a href="http://blogs.perl.org/users/ovid/2011/11/technical-debt-when-metaphors-go-wrong.html">source</a>)</li>
-                                <li>Monetary debt has a schedule for repayment, but not tech debt. (<a href="http://blogs.perl.org/users/ovid/2011/11/technical-debt-when-metaphors-go-wrong.html">source</a>)</li>
-                                <!-- Technical Debt is the difference between your current understanding of the domain and the understanding that is reflected in the current version of the software. http://programmers.stackexchange.com/a/270037 -->
+                                <li>Pollution is a contaminate that causes adverse change in a system.</li>
+                                <li>Tech debt is code that casues adverse change in a system.</li>
+                                <li>How we measure and communicate is similar</li>
                             </ul>
                         </aside>
                     </section>
@@ -272,10 +250,9 @@
                         </blockquote>
                         <aside class="notes">
                             <ul>
-                                <li>Monetary debt is not an edgy topic: it's well understood in our society.</li>
-                                <li>Environmental pollution is an edgy topic because it is extremely difficult to quantify the business impact and motivate change.</li>
-                                <li>Technical debt likewise is edgy because it is extremely difficult to quantify the business impact and motivate change.</li>
-                                <li>The environment has no voice, and neither does code.</li>
+                                <li>Where can we look for insights on pollution?</li>
+                                <li>overview of story</li>
+                                <li>Code, like env, has no voice</li>
                             </ul>
                         </aside>
                     </section>
