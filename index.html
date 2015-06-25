@@ -91,10 +91,10 @@
                     <section data-background="http://i.huffpost.com/gadgets/slideshows/328204/slide_328204_3186483_free.jpg">
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe</li>
+                                <!--<li>Presenter: Joe</li>-->
                                 <li>smog was coined in London, not LA</li>
                                 <li>no easy alternative, so they would cope; peppered moth</li>
-                                <li>to be against coal was to be against progress</li>
+                                <li>legislation: to be against coal was to be against progress</li>
                             </ul>
                         </aside>
                     </section>
@@ -114,9 +114,11 @@
                         </ol>
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe</li>
+                                <!--<li>Presenter: Joe</li>-->
                                 <li>4,000 people died</li>
                                 <li>inspiration for modern environmental movement</li>
+                                <li>divide: pollution is natural vs<br>progress w/o pollution control isn't progress</li>
+                                <li>change wasn't immediate</li>
                             </ul>
                         </aside>
                     </section>
@@ -130,7 +132,7 @@
                         </ol>
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe</li>
+                                <!--<li>Presenter: Joe</li>-->
                                 <li>relation to tech debt:</li>
                                 <li>1. monetary vs environmental</li>
                                 <li>2. approach the same way</li>
@@ -147,9 +149,10 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Joe for this entire section</li>
-                                <li>original context</li>
-                                <li>analogy: iterating over a prototype</li>
+                                <!--<li>Presenter: Joe for this entire section</li>-->
+                                <li>original context: agile financial software</li>
+                                <li>iterating over a prototype</li>
+                                <li>communicate the idea to his boss</li>
                             </ul>
                         </aside>
                     </section>
@@ -159,7 +162,9 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>delay effort to meet an objective</li>
+                                <li>comparison: delay effort to meet an objective</li>
+                                <li>shorten time to market<br>(fail fast)</li>
+                                <li>preserve startup capital<br>(delay a feature)</li>
                                 <li>This is good!</li>
                             </ul>
                         </aside>
@@ -171,41 +176,56 @@
                         <aside class="notes">
                             <ul>
                                 <li>danger of debt: cash flow</li>
+                                <li>feature LOE &gt; launch date</li>
+                                <li>bug LOE &gt; SLA</li>
                                 <li>This is bad :(</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section>
-                        <img src="assets/techDebtQuadrant.png" alt="Technical debt is Prudent vs Reckless and Deliberate vs Inadvertent" />
+                        <img src="assets/techDebtQuadrant.png" alt="Technical debt is Prudent vs Reckless and Deliberate vs Inadvertent" style="border:0;box-shadow:none;min-width:80%"/>
+                        <small>Source: Fowler, M. 2009. Technical debt quadrant, Blog post at: <a href="http://martinfowler.com/bliki/TechnicalDebtQuadrant.html">http://martinfowler.com/bliki/TechnicalDebtQuadrant.html</a>.</small>
 
                         <aside class="notes">
                             <ul>
                                 <li>what is "not-quite-right"?</li>
-                                <li>Martin Fowler: does debt describe what we observe?</li>
+                                <li>ideal/Ward: always clean code</li>
+                                <li>pragmatic/Fowler: does debt describe what we observe?
+                                    <ol style="font-size:80%">
+                                        <li>TR: cut corner/abstract class</li>
+                                        <li>BR: await feedback/prototype</li>
+                                        <li>TL: worst kind!/antipatterns</li>
+                                        <li>BL: jr dev/cruft</li>
+                                    </ol>
+                                </li>
+                                <li>tech debt = not-quite-right code</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section>
-                        <img src="assets/Code_Mess-Productivity_vs_Time.svg" alt="As time increases, productivity declines" />
+                        <img style="border:0;box-shadow:none" src="assets/Code_Mess-Productivity_vs_Time.svg" alt="As time increases, productivity declines" />
 
                         <aside class="notes">
                             <ul>
                                 <li>debt payments vs building features</li>
                                 <li>Brook's law: adding manpower makes it worse</li>
-                                <li>contextualize tech debt with other effort</li>
+                                <li>fact: debt must be repayed</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section>
-                        <img src="assets/What_colour_is_your_backlog.svg" alt="Colour of a backlog are feature (green), architecture (blue), bug (red), and tech debt (yellow)"  />
+                        <img style="border:0;box-shadow:none" src="assets/What_colour_is_your_backlog.svg" alt="Colour of a backlog are feature (green), architecture (blue), bug (red), and tech debt (yellow)"  />
 
                         <aside class="notes">
-                            <li>describe each quadrant</li>
-                            <li>why is tech debt neglected?</li>
-                            <li>why is it important?</li>
+                            <ul>
+                                <li>contextualize tech debt with other effort</li>
+                                <li>why is tech debt neglected? invisible and negative</li>
+                                <li>why is it important? velocity</li>
+                                <li>expose and manage tech debt</li>
+                            </ul>
                         </aside>
                     </section>
 
@@ -220,7 +240,8 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>tech debt is the gap of effort between where the code should be and where it is</li>
+                                <li>suggests you think of money and technology in similar ways</li>
+                                <li>this is false</li>
                             </ul>
                         </aside>
                     </section>
@@ -238,7 +259,7 @@
                             <ul>
                                 <li>Pollution is a contaminate that causes adverse change in a system.</li>
                                 <li>Tech debt is code that casues adverse change in a system.</li>
-                                <li>How we measure and communicate is similar</li>
+                                <li>How we measure and communicate it is similar</li>
                             </ul>
                         </aside>
                     </section>
@@ -250,7 +271,7 @@
                         </blockquote>
                         <aside class="notes">
                             <ul>
-                                <li>Where can we look for insights on pollution?</li>
+                                <li>Where can we look for insights on pollution? Lorax.</li>
                                 <li>overview of story</li>
                                 <li>Code, like env, has no voice</li>
                             </ul>
