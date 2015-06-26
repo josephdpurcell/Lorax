@@ -58,9 +58,9 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Presenter: Andrea then Joe</li>
-                                <li>Joe: webdev 2003, engineer @ p.net, inspired by cross-disp research</li>
-                                <li>@todo Who is Palantir?</li>
+                                <li>full-service agency</li>
+                                <li>open source tech</li>
+                                <li>Palantir is a full-service web design, development, and strategy agency that uses open source technologies and sustainable methodologies to help enable people to share information in new and engaging ways.</li>
                             </ul>
                         </aside>
                     </section>
@@ -145,7 +145,7 @@
                 <!-- Symptoms -->
 				<section>
                     <section>
-                        <h1>What is technical debt?</h1>
+                        <h1>What is<br>technical debt?</h1>
 
                         <aside class="notes">
                             <ul>
@@ -194,7 +194,7 @@
                                 <li>pragmatic/Fowler: does debt describe what we observe?
                                     <ol style="font-size:80%">
                                         <li>TR: cut corner/abstract class</li>
-                                        <li>BR: await feedback/prototype</li>
+                                        <li>BR: evolution/prototype</li>
                                         <li>TL: worst kind!/antipatterns</li>
                                         <li>BL: jr dev/cruft</li>
                                     </ol>
@@ -211,7 +211,7 @@
                             <ul>
                                 <li>debt payments vs building features</li>
                                 <li>Brook's law: adding manpower makes it worse</li>
-                                <li>fact: debt must be repayed</li>
+                                <li>fact: debt must be repaid</li>
                             </ul>
                         </aside>
                     </section>
@@ -234,8 +234,7 @@
                         <ul>
                             <li class="fragment">Single metric? <span class="fragment">No.</span></li>
                             <li class="fragment">Easy to measure? <span class="fragment">No.</span></li>
-                            <li class="fragment">Constant and expected impact? <span class="fragment">No.</span></li>
-                            <li class="fragment">Simple to understand? <span class="fragment">No.</span></li>
+                            <li class="fragment">Constant and deterministic impact? <span class="fragment">No.</span></li>
                         </ul>
 
                         <aside class="notes">
@@ -251,14 +250,13 @@
                         <ul>
                             <li class="fragment">Multi metric? <span class="fragment">Yes.</span></li>
                             <li class="fragment">Difficult to measure? <span class="fragment">Yes.</span></li>
-                            <li class="fragment">Variable and unexpected impact? <span class="fragment">Yes.</span></li>
-                            <li class="fragment">Difficult to understand? <span class="fragment">Yes.</span></li>
+                            <li class="fragment">Variable and probabilistic impact? <span class="fragment">Yes.</span></li>
                         </ul>
 
                         <aside class="notes">
                             <ul>
                                 <li>Pollution is a contaminate that causes adverse change in a system.</li>
-                                <li>Tech debt is code that casues adverse change in a system.</li>
+                                <li>Tech debt is code that causes adverse change in a system.</li>
                                 <li>How we measure and communicate it is similar</li>
                             </ul>
                         </aside>
@@ -275,26 +273,12 @@
                             </ul>
                         </aside>
                     </section>
-
-                    <section>
-                        <blockquote>
-                            I am the Lorax. I speak for the trees.<br>
-                            I speak for the trees, for the trees have no tongues.
-                        </blockquote>
-                        <aside class="notes">
-                            <ul>
-                                <li>Where can we look for insights on pollution? Lorax.</li>
-                                <li>overview of story</li>
-                                <li>Code, like env, has no voice</li>
-                            </ul>
-                        </aside>
-                    </section>
                 </section>
 
                 <!-- Causes -->
 				<section>
                     <section>
-                        <h1>Causes of technical debt</h1>
+                        <h1>What causes<br>technical debt?</h1>
 
                         <aside class="notes">
                             <ul>
@@ -303,60 +287,50 @@
                         </aside>
                     </section>
 
-
-                    <!-- 5 points: consider not reading the quotes; let them come to their own conclusions -->
-
                     <section>
-                        <blockquote>business is business and business must grow regardless of grummies in tummies, you know</blockquote>
+                        <blockquote style="text-align: left">
+                        And, for your information, you Lorax, I'm figgering on biggering<br>
+                        <span style="margin-left:2em">and BIGGERING</span><br>
+                        <span style="margin-left:4em">and BIGGERING</span><br>
+                        <span style="margin-left:6em">and BIGGERING,</span><br>
+                        turning MORE Truffula Trees into Thneeds<br>
+                        which everyone, EVERYONE, <em>EVERYONE</em> needs!
+                        </blockquote>
 
                         <aside class="notes">
-                            Writing code and merging it with no one seeing it.
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>I laughed at the Lorax, "You poor stupid guy! You never can tell what some people will buy!"</blockquote>
-
-                        <aside class="notes">
-                            Writing custom code that doesn’t follow standards, code style guidelines, design patterns, framework conventions, documentation, etc.
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>And FYI you Lorax, I'm figgering on biggering and biggering and BIGGERING and BIGGERING. turning more truffle trees into thneeds which everyone EVERYONE EVERYONE needs</blockquote>
-
-                        <aside class="notes">
-                            Business pressures:
                             <ul>
-                                <li>releasing sooner before all necessary changes are complete.</li>
-                                <li>When businesses make decisions without considering the technical implications.</li>
-                                <li>When business requirements are not properly communicated to and understood by developers.</li>
-                                <li>When business requirements change after implementation.</li>
-                                <li>Delaying refactoring.</li>
+                                <li>Tell story about the Lorax</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section>
-                        @todo find quotes
-
+                        <h1>Schedule Pressures</h1>
                         <aside class="notes">
-                            <ul>
-                                <li>bad architecture</li>
-                                <li>Building monolithic architectures can result in close coupling and fail to meet the flexibility needed for changing business requirements.</li>
-                            </ul>
                         </aside>
                     </section>
 
                     <section>
-                        swim lanes <br>
-                        @todo find quotes
-
+                        <h1>Business Pressure</h1>
                         <aside class="notes">
-                            <ul>
-                                <li>Parallel development risks implementing the wrong architecture. When the code is merged and/or integrated, tech debt may surface.</li>
-                                <li>INSERT MYTHICAL MAN MONTH QUOTE - the idea that you can speed up dev with more peopl</li>
-                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Changing Requirements</h1>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Code Practices</h1>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Incomplete Tests</h1>
+                        <aside class="notes">
                         </aside>
                     </section>
 
@@ -371,7 +345,7 @@
                 <!-- Monitoring & Policies -->
 				<section>
                     <section>
-                        <h1>How to deal with technical debt</h1>
+                        <h1>How do you deal with technical debt?</h1>
 
                         <aside class="notes">
                             <ul>
@@ -391,7 +365,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>Palantir: button dividers, zero-emission furniture, recycling, garden, bike</li>
                                 <li>Communicating invisible negative value to stakeholders requires the backing of your company from the top down.</li>
                                 <li>Cultivate an environment of good code.</li>
@@ -408,7 +382,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>BDD keeps it formal</li>
                             </ul>
                         </aside>
@@ -422,7 +396,7 @@
                         </blockquote>
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>Enable Lorax to influence business decisions</li>
                             </ul>
                         </aside>
@@ -436,7 +410,7 @@
                         </blockquote>
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                             </ul>
                         </aside>
                     </section>
@@ -464,7 +438,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>architecture and agile are oil and water (Kruchten)</li>
                                 <li>If you start with a bicycle, you can't iterate to a race car. You need a rewrite.</li>
                                 <li>tradeoff of BUFD vs pivoting</li>
@@ -481,7 +455,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>Build refactor time into your development cycle.</li>
                                 <li>Consider adding refactor buffers into work estimates.</li>
                             </ul>
@@ -489,13 +463,11 @@
                     </section>
 
                     <section>
-                        <h1>Test Driven Development (TDD)</h1>
-
-                        <blockquote>
-                            "the pre-release defect density of the four products decreased between 40% and 90% relative to similar projects that did not use the TDD practice. Subjectively, the teams experienced a 15–35% increase in initial development time after adopting TDD." ("<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>", Empirical Software Engineering 2008)
-                        </blockquote>
+                        <h1>Test Driven Development<br>(TDD)</h1>
 
                         <aside class="notes">
+                                <small>"the pre-release defect density of the four products decreased between 40% and 90% relative to similar projects that did not use the TDD practice. Subjectively, the teams experienced a 15–35% increase in initial development time after adopting TDD." <!--("<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>", Empirical Software Engineering 2008)--></small>
+
                             <ul>
                                 <li>Presenter: Andrea</li>
                                 <li>BDD ftw!</li>
@@ -513,7 +485,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>analogy: coal scrubbers</li>
                                 <li>configure IDE to throw errors</li>
                                 <li>use Git hooks</li>
@@ -532,7 +504,7 @@
 
                         <aside class="notes">
                             <ul>
-                                <!--<li>Presenter: Joe</li>-->
+                                <li>Presenter: Joe</li>
                                 <li>phpcs: Code style violations</li>
                                 <li>phpdcd: Dead code</li>
                                 <li>phpcpd: Copy and paste</li>
@@ -546,21 +518,20 @@
                     <section>
                         <h1>PR Review</h1>
 
-                        <blockquote>"Look, Lorax" I said. "There"s no cause for alarm. I chopped just one tree. I am doing no harm. I am being quite useful. This thing is a Thneed. A Thneed is a Fine-Something-That-All-People-Need!"</blockquote>
-
                         <aside class="notes">
                             <ul>
                                 <li>Presenter: Andrea</li>
-                                <li>Establish a good PR review process.</li>
-                                <li>Consider lack of or inaccurate documentation as a critical bug</li>
-                                <li>This is a great transition into: Unless you care as the reviewer; this is the final check.</li>
-                                <li>If you let pass even just one "not-quite-right code", you can get into a slippery slope.</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section>
-                        <blockquote>Unless someone like you carse a whole awful lot nothing is going to get better its not</blockquote>
+                        <blockquote>
+                        UNLESS someone like you<br>
+                        cares a whole awful lot,<br>
+                        nothing is going to get better.<br>
+                        It's not.
+                        </blockquote>
 
                         <aside class="notes">
                             <ul>
