@@ -1,609 +1,611 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Technical Debt Insights from the Lorax</title>
+    <title>Technical Debt Insights from the Lorax</title>
 
-		<meta name="description" content="Presentation slides on technical debt insights from the Lorax">
-		<meta name="author" content="Joseph D. Purcell">
-		<meta name="author" content="Andrea Soper">
+    <meta name="description" content="Presentation slides on technical debt insights from the Lorax">
+    <meta name="author" content="Joseph D. Purcell">
+    <meta name="author" content="Andrea Soper">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="palantirnet-theme/assets/css/styles.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-    <!-- Change body class to "dark" if you prefer a dark theme, or "light" if you'd rather have a light theme-->
-    <body class="white">
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <!-- Change body class to "dark" if you prefer a dark theme, or "light" if you'd rather have a light theme-->
+  <body class="white">
     <div class="reveal">
-        <div class="logo">
-            <p>Palantir.net</p>
-        </div>
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-                <!-- Introduction -->
-				<section>
-                    <section data-background="images/title.png" class="title">
-                        <h1>Technical Debt</h1>
-                        <h3>Insights from the Lorax</h3>
-
-                        <aside class="notes">
-                            Presenter: Andrea
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Who are we?</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea then Joe</li>
-                                <li>full-service agency: design, dev, strategy</li>
-                                <li>open source tech: share info in new engaging ways</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Who are you?</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <!-- supporting points -->
-                    <section data-background="http://i.huffpost.com/gadgets/slideshows/328204/slide_328204_3186483_free.jpg">
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>smog was coined in London, not LA</li>
-                                <li>no easy alternative, so they would cope; peppered moth</li>
-                                <li>legislation: to be against coal was to be against progress</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Great Smog of '52</h1>
-                        <ol class="fragment">
-                            <li>What were the symptoms? <p>illness, transit problems from low visibility</p></li>
-                            <li class="fragment">What were the causes? <p>"things that make smoke"</p></li>
-                            <li class="fragment">What policies can mitigate the issue? <p>1956 Clean Air Act:
-                                <ul>
-                                    <li>use clean energy</li>
-                                    <li>increase height of chimneys</li>
-                                    <li>implement "smoke free zones"</li>
-                                </ul>
-                            </p></li>
-                        </ol>
-                        <aside class="notes">
-                            <ul>
-                                <!--<li>Presenter: Joe</li>-->
-                                <li>4,000 people died</li>
-                                <li>inspiration for modern environmental movement</li>
-                                <li>divide: pollution is natural vs<br>progress w/o pollution control isn't progress</li>
-                                <li>change wasn't immediate</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Overview</h1>
-                        <ol class="fragment" style="min-width:70%">
-                            <li>What is technical debt?</li>
-                            <li class="fragment">What causes technical debt?</li>
-                            <li class="fragment">How do you deal with technical debt?</li>
-                        </ol>
-                        <aside class="notes">
-                            <ul>
-                                <!--<li>Presenter: Joe</li>-->
-                                <li>relation to tech debt:</li>
-                                <li>1. monetary vs environmental</li>
-                                <li>2. approach the same way</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                </section>
-
-                <!-- Symptoms -->
-				<section>
-                    <section>
-                        <h1>What is<br>technical debt?</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <!--<li>Presenter: Joe for this entire section</li>-->
-                                <li>original context: agile financial software</li>
-                                <li>iterating over a prototype</li>
-                                <li>communicate the idea to his boss</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite." (<a href="http://c2.com/doc/oopsla92.html">Ward Cunningham</a>)</blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>comparison: delay effort to meet an objective</li>
-                                <li>shorten time to market<br>(fail fast)</li>
-                                <li>preserve startup capital<br>(delay a feature)</li>
-                                <li>This is good!</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>"The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt." (<a href="http://c2.com/doc/oopsla92.html">Ward Cunningham</a>)</blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>danger of debt: cash flow</li>
-                                <li>feature LOE &gt; launch date</li>
-                                <li>bug LOE &gt; SLA</li>
-                                <li>This is bad :(</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <img src="assets/techDebtQuadrant.png" alt="Technical debt is Prudent vs Reckless and Deliberate vs Inadvertent" style="border:0;box-shadow:none;min-width:80%"/>
-                        <small>Source: Fowler, M. 2009. Technical debt quadrant, Blog post at: <a href="http://martinfowler.com/bliki/TechnicalDebtQuadrant.html">http://martinfowler.com/bliki/TechnicalDebtQuadrant.html</a>.</small>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>what is "not-quite-right"?</li>
-                                <li>ideal/Ward: always clean code</li>
-                                <li>pragmatic/Fowler: does debt describe what we observe?
-                                    <ol style="font-size:80%">
-                                        <li>TR: cut corner/abstract class</li>
-                                        <li>BR: evolution/prototype</li>
-                                        <li>TL: worst kind!/antipatterns</li>
-                                        <li>BL: jr dev/cruft</li>
-                                    </ol>
-                                </li>
-                                <li>tech debt = not-quite-right code</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <img style="border:0;box-shadow:none" src="assets/Code_Mess-Productivity_vs_Time.svg" alt="As time increases, productivity declines" />
-
-                        <aside class="notes">
-                            <ul>
-                                <li>debt payments vs building features</li>
-                                <li>Brook's law: adding manpower makes it worse</li>
-                                <li>fact: debt must be repaid</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <img style="border:0;box-shadow:none" src="assets/What_colour_is_your_backlog.svg" alt="Colour of a backlog are feature (green), architecture (blue), bug (red), and tech debt (yellow)"  />
-
-                        <aside class="notes">
-                            <ul>
-                                <li>contextualize tech debt with other effort</li>
-                                <li>why is tech debt neglected? invisible and negative</li>
-                                <li>why is it important? velocity</li>
-                                <li>expose and manage tech debt</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h3>The monetary analogy<br>communicates the wrong idea.</h3>
-                        <ul>
-                            <li class="fragment">Single metric? <span class="fragment">No.</span></li>
-                            <li class="fragment">Easy to measure? <span class="fragment">No.</span></li>
-                            <li class="fragment">Constant and deterministic impact? <span class="fragment">No.</span></li>
-                        </ul>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>suggests you think of money and technology in similar ways</li>
-                                <li>this is false</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h3>The pollution analogy<br>communicates the right idea.</h3>
-                        <ul>
-                            <li class="fragment">Multi metric? <span class="fragment">Yes.</span></li>
-                            <li class="fragment">Difficult to measure? <span class="fragment">Yes.</span></li>
-                            <li class="fragment">Variable and probabilistic impact? <span class="fragment">Yes.</span></li>
-                        </ul>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Pollution is a contaminate that causes adverse change in a system.</li>
-                                <li>Tech debt is code that causes adverse change in a system.</li>
-                                <li>How we measure and communicate it is similar</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>
-                            Managing your code is more like a garden<br>than your bank account.
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>London smog isn't eliminated by a loan or a default</li>
-                            </ul>
-                        </aside>
-                    </section>
-                </section>
-
-                <!-- Causes -->
-				<section>
-                    <section>
-                        <h1>What causes<br>technical debt?</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea for this entire section</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote style="text-align: left">
-                        And, for your information, you Lorax, I'm figgering on biggering<br>
-                        <span style="margin-left:2em">and BIGGERING</span><br>
-                        <span style="margin-left:4em">and BIGGERING</span><br>
-                        <span style="margin-left:6em">and BIGGERING,</span><br>
-                        turning MORE Truffula Trees into Thneeds<br>
-                        which everyone, EVERYONE, <em>EVERYONE</em> needs!
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Tell story about the Lorax</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Schedule Pressures</h1>
-                        <aside class="notes">
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Business Pressure</h1>
-                        <aside class="notes">
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Changing Requirements</h1>
-                        <aside class="notes">
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Code Practices</h1>
-                        <aside class="notes">
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Incomplete Tests</h1>
-                        <aside class="notes">
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>"I repeat" cried the Lorax, "I speak for the trees"</blockquote>
-                        <aside class="notes">
-                            Transition slide
-                        </aside>
-                    </section>
-                </section>
-
-                <!-- Monitoring & Policies -->
-				<section>
-                    <section>
-                        <h1>How do you deal with technical debt?</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Culture</h1>
-
-                        <blockquote>
-                            Being "green" requires everyone on board,<br>especially leadership.
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>Palantir: zero-emission, recycling, garden, bike</li>
-                                <li>Communicating invisible negative value to stakeholders requires the backing of your company from the top down.</li>
-                                <li>Cultivate an environment of good code.</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Culture</h1>
-
-                        <blockquote>
-                            BDD language communicate business requirements without the business pressure (e.g. Gherkin).
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>BDD keeps it formal</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Culture</h1>
-
-                        <blockquote>
-                            PM's need to support their Lorax.
-                        </blockquote>
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>Enable Lorax to influence business decisions</li>
-                                <li>Toyota's Andon pullchord</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Culture</h1>
-
-                        <blockquote>
-                            PM's need to protect the focus of your team.<br>Keep business pressure out.
-                        </blockquote>
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>focus is positively correlated with quality</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <!-- treat it with care / grow it -->
-                        <h1>Design Patterns</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Plan to Refactor</h1>
-
-                        <blockquote>
-                            Agile is prone to technical debt<br>because of YAGNI.
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>architecture and agile are oil and water (Kruchten)</li>
-                                <li>If you start with a bicycle, you can't iterate to a race car. You need a rewrite.</li>
-                                <li>tradeoff of BUFD vs pivoting</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Plan to Refactor</h1>
-
-                        <blockquote>
-                            "An excellent time to refactor code is right before you extend it." (<a href="http://c2.com/cgi/wiki?TechnicalDebt">Ward Cunningham</a>)
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>Build refactor time into your development cycle.</li>
-                                <li>Consider adding refactor buffers into work estimates.</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Test Driven Development<br>(TDD)</h1>
-
-                        <aside class="notes">
-                                <small>"the pre-release defect density of the four products decreased between 40% and 90% relative to similar projects that did not use the TDD practice. Subjectively, the teams experienced a 15–35% increase in initial development time after adopting TDD." <!--("<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>", Empirical Software Engineering 2008)--></small>
-
-                            <ul>
-                                <li>Presenter: Andrea</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <!-- protect from axes that hack -->
-                        <h1>Continuous Integration</h1>
-
-                        <blockquote>
-                            Prevent pollution at the source.
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>analogy: coal scrubbers</li>
-                                <li>configure IDE to throw errors</li>
-                                <li>use Git hooks</li>
-                                <li>use a CI system to send alerts when code fails quality metrics</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Continuous Integration</h1>
-
-                        <blockquote>
-                            Define quality and<br>the tolerance level of pollution.<br>
-                            <small>(See <a href="http://phpqatools.org/">phpqatools.org</a> and <a href="http://www.phpmetrics.org/">phpmetrics.org</a>)</small>
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Joe</li>
-                                <li>phpcs: Code style violations</li>
-                                <li>phpdcd: Dead code</li>
-                                <li>phpcpd: Copy and paste</li>
-                                <li>pdepend: Cyclomatic complexity (phpqatools)</li>
-                                <li>Listen to PHPMD! single best</li>
-                                <li>Use CodeClimate or Scruitinizer</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>PR Review</h1>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <blockquote>
-                        UNLESS someone like you<br>
-                        cares a whole awful lot,<br>
-                        nothing is going to get better.<br>
-                        It's not.
-                        </blockquote>
-
-                        <aside class="notes">
-                            <ul>
-                                <li>Presenter: Andrea</li>
-                            </ul>
-                        </aside>
-                    </section>
-				</section>
-
-				<section>
-                    <h1>Questions?</h1>
-                </section>
-
-                <section>
-                    <h1>References</h1>
-                    <p><i>(In order of reference during presentation.)</i></p>
-                    <ul>
-                        <li>Dr. Seuss. <i>The Lorax</i>. New York: Random House, 1971. Print.</li>
-                        <li>Brown, Paul. "<a href="http://www.theguardian.com/uk_news/story/0,3604,850909,00.html">50 years after the great smog, a new killer arises</a>." The Guardian, 2002.</li>
-                        <li>Cunningham, Ward. "<a href="http://c2.com/doc/oopsla92.html">The WyCash Portfolio Management System</a>." c2.com, March 1992. Web. June 2015.</li>
-                        <li>Fowler, Martin. "<a href="http://martinfowler.com/bliki/TechnicalDebtQuadrant.html">Technical Debt Quadrant</a>." martinfowler.com, October 2009. Web. June 2015.</li>
-                        <li>Martin, Robert C. <i>Clean Code</i>. Boston: Prentice Hall, 2008. Print.</li>
-                        <li>Krutchten, P. "<a href="http://pkruchten.wordpress.com/Talks">What colour is your backlog?</a>." pkruchten.wordpress.com, December 2013. Web. June 2015.
-                        <li>Nagappan, Nachiappan, et all. "<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>." Empirical Software Engineering Volume 13. Issue 3 (2008): pp 289-302. Print.</li>
-                        <li>The PHP Quality Assurance Toolchain. <a href="http://phpqatools.org/">http://phpqatools.org</a>.</li>
-                        <li>PhpMetrics. <a href="http://www.phpmetrics.org/">http://phpmetrics.org</a>.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h1>Recommended Reading</h1>
-                    <ul>
-                        <li>All the references!</li>
-                        <li>Brooks, Fred. <i>The Mythical Man-Month: Essays on Software Engineering </i>. Boston: Addison-Wesley, 1975. Print.</li>
-                        <li>Gamma, Erich, et all. <i>Design Patterns: Elements of Reusable Object-Oriented Software</i>. Reading, Mass: Addison-Wesley, 1995. Print.</li>
-                        <li>Denne, Mark, and Jane Cleland-Huang. <i>Software by Numbers: Low-Risk, High-Return Development</i>. Boston: Prentice Hall, 2003. Print.</li>
-                        <li>Johann, Sven and Eberhard Wolff. "<a href="http://www.infoq.com/articles/managing-technical-debt">Managing Technical Debt</a>." www.infoq.com, May 2013. Web. June 2015.</li>
-                        <li>Laribee, David. "<a href="https://msdn.microsoft.com/en-us/magazine/ee819135.aspx">Using Agile Techniques to Pay Back Technical Debt</a>." msdn.microsoft.com, December 2009. Web. June 2015.</li>
-                        <li>Fowler, Martin. "<a href="http://martinfowler.com/bliki/DesignStaminaHypothesis.html">Design Stamina Hypothesis</a>." martinfowler.com, June 2007. Web. June 2015.</li>
-                        <li>Cunningham, Ward. "<a href="http://c2.com/cgi-bin/wiki?FirstLawOfProgramming">First Law Of Programming</a>." c2.com, December 2014. Web. June 2015.</li>
-                        <li>Cunningham, Ward. "<a href="http://c2.com/cgi/wiki?WardExplainsDebtMetaphor">Ward Explains Debt Metaphor</a>." c2.com, January 2011. Web. June 2015.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h1>Recommended Reading Cont'd</h1>
-                    <ul>
-                        <li>P. Kruchten, R. Nord, and I. Ozkaya. "<a href="http://www.sei.cmu.edu/library/assets/whitepapers/Technical%20Debt-From%20Metaphor%20to%20Theory%20and%20Practice.pdf">Technical Debt: From Metaphor to Theory and Practice</a>." IEEE Software, Vol. 29. Issue 6 (2012):  pp. 18-21.</li>
-                        <li>A. Martini, J. Bosch, and  M. Chaudron. "<a href="http://www.researchgate.net/profile/Antonio_Martini/publication/265822240_Architecture_Technical_Debt_Understanding_Causes_and_a_Qualitative_Model/links/541e98ac0cf203f155c06533.pdf">Architecture Technical Debt: Understanding Causes and a Qualitative Model</a>." www.researchgate.net, September 2014. Web. June 2015.</li>
-                        <li>Ramakrishnan, Srinath. "<a href="https://www.scrumalliance.org/community/articles/2013/july/managing-technical-debt">Managing Technical Debt</a>." www.scrumalliance.org, July 2013. Web. June 2015.</li>
-                        <li>Fowler, Martin. "<a href="http://martinfowler.com/articles/testing-culture.html">Goto Fail, Heartbleed, and Unit Testing Culture</a>." martinfowler.com, May 2014. Web. June 2015.</li>
-                    </ul>
-                </section>
-
-				<section>
-                    <h1>Thank You!</h1>
-                </section>
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
+      <div class="logo">
+        <p>Palantir.net</p>
+      </div>
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Introduction -->
+        <section>
+          <section data-background="images/title.png" class="title">
+            <h1>Technical Pollution</h1>
+            <h3>Insights from the Lorax</h3>
+
+            <aside class="notes">
+              Presenter: Andrea
+            </aside>
+          </section>
+
+          <section>
+            <h1>Who are we?</h1>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea then Joe</li>
+                <li>full-service agency: design, dev, strategy</li>
+                <li>open source tech: share info in new engaging ways</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Who are you?</h1>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea</li>
+              </ul>
+            </aside>
+          </section>
+
+          <!-- supporting points -->
+          <section data-background="http://i.huffpost.com/gadgets/slideshows/328204/slide_328204_3186483_free.jpg">
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>smog was coined in London, not LA</li>
+                <li>no easy alternative, so they would cope; peppered moth</li>
+                <li>legislation: to be against coal was to be against progress</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Great Smog of '52</h1>
+            <ol class="fragment">
+              <li>What were the symptoms? <p>illness, transit problems from low visibility</p></li>
+              <li class="fragment">What were the causes? <p>"things that make smoke"</p></li>
+              <li class="fragment">What policies can mitigate the issue? <p>1956 Clean Air Act:
+                <ul>
+                  <li>use clean energy</li>
+                  <li>increase height of chimneys</li>
+                  <li>implement "smoke free zones"</li>
+                </ul>
+              </li>
+            </ol>
+            <aside class="notes">
+              <ul>
+                <!--<li>Presenter: Joe</li>-->
+                <li>4,000 people died</li>
+                <li>inspiration for modern environmental movement</li>
+                <li>divide: pollution is natural vs<br>progress w/o pollution control isn't progress</li>
+                <li>change wasn't immediate</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Overview</h1>
+            <ol class="fragment" style="min-width:70%">
+              <li>What is technical debt?</li>
+              <li class="fragment">What causes technical debt?</li>
+              <li class="fragment">How do you deal with technical debt?</li>
+            </ol>
+            <aside class="notes">
+              <ul>
+                <!--<li>Presenter: Joe</li>-->
+                <li>relation to tech debt:</li>
+                <li>1. monetary vs environmental</li>
+                <li>2. approach the same way</li>
+              </ul>
+            </aside>
+          </section>
+
+        </section>
+
+        <!-- Symptoms -->
+        <section>
+          <section>
+            <h1>What is<br>technical debt?</h1>
+
+            <aside class="notes">
+              <ul>
+                <!--<li>Presenter: Joe for this entire section</li>-->
+                <li>original context: agile financial software</li>
+                <li>iterating over a prototype</li>
+                <li>communicate the idea to his boss</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <blockquote>"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite." (<a href="http://c2.com/doc/oopsla92.html">Ward Cunningham</a>)</blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>comparison: delay effort to meet an objective</li>
+                <li>shorten time to market<br>(fail fast)</li>
+                <li>preserve startup capital<br>(delay a feature)</li>
+                <li>This is good!</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <blockquote>"The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt." (<a href="http://c2.com/doc/oopsla92.html">Ward Cunningham</a>)</blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>danger of debt: cash flow</li>
+                <li>feature LOE &gt; launch date</li>
+                <li>bug LOE &gt; SLA</li>
+                <li>This is bad :(</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img src="assets/techDebtQuadrant.png" alt="Technical debt is Prudent vs Reckless and Deliberate vs Inadvertent" style="border:0;box-shadow:none;min-width:80%"/>
+            <small>Source: Fowler, M. 2009. Technical debt quadrant, Blog post at: <a href="http://martinfowler.com/bliki/TechnicalDebtQuadrant.html">http://martinfowler.com/bliki/TechnicalDebtQuadrant.html</a>.</small>
+
+            <aside class="notes">
+              <ul>
+                <li>what is "not-quite-right"?</li>
+                <li>ideal/Ward: always clean code</li>
+                <li>pragmatic/Fowler: does debt describe what we observe?
+                  <ol style="font-size:80%">
+                    <li>TR: cut corner/abstract class</li>
+                    <li>BR: evolution/prototype</li>
+                    <li>TL: worst kind!/antipatterns</li>
+                    <li>BL: jr dev/cruft</li>
+                  </ol>
+                </li>
+                <li>tech debt = not-quite-right code</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img style="border:0;box-shadow:none" src="assets/Code_Mess-Productivity_vs_Time.svg" alt="As time increases, productivity declines" />
+
+            <aside class="notes">
+              <ul>
+                <li>debt payments vs building features</li>
+                <li>Brook's law: adding manpower makes it worse</li>
+                <li>fact: debt must be repaid</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img style="border:0;box-shadow:none" src="assets/What_colour_is_your_backlog.svg" alt="Colour of a backlog are feature (green), architecture (blue), bug (red), and tech debt (yellow)"  />
+
+            <aside class="notes">
+              <ul>
+                <li>contextualize tech debt with other effort</li>
+                <li>why is tech debt neglected? invisible and negative</li>
+                <li>why is it important? velocity</li>
+                <li>expose and manage tech debt</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h3>The monetary analogy<br>communicates the wrong idea.</h3>
+            <ul>
+              <li class="fragment">Single metric? <span class="fragment">No.</span></li>
+              <li class="fragment">Easy to measure? <span class="fragment">No.</span></li>
+              <li class="fragment">Constant and deterministic impact? <span class="fragment">No.</span></li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>suggests you think of money and technology in similar ways</li>
+                <li>this is false</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h3>The pollution analogy<br>communicates the right idea.</h3>
+            <ul>
+              <li class="fragment">Multi metric? <span class="fragment">Yes.</span></li>
+              <li class="fragment">Difficult to measure? <span class="fragment">Yes.</span></li>
+              <li class="fragment">Variable and probabilistic impact? <span class="fragment">Yes.</span></li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Pollution is a contaminate that causes adverse change in a system.</li>
+                <li>Tech debt is code that causes adverse change in a system.</li>
+                <li>How we measure and communicate it is similar</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <blockquote>
+              Managing your code is more like a garden<br>than your bank account.
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>London smog isn't eliminated by a loan or a default</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <!-- Causes -->
+        <section>
+          <section>
+            <h1>What causes<br>technical debt?</h1>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea for this entire section</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <blockquote style="text-align: left">
+              And, for your information, you Lorax, I'm figgering on biggering<br>
+              <span style="margin-left:2em">and BIGGERING</span><br>
+              <span style="margin-left:4em">and BIGGERING</span><br>
+              <span style="margin-left:6em">and BIGGERING,</span><br>
+              turning MORE Truffula Trees into Thneeds<br>
+              which everyone, EVERYONE, <em>EVERYONE</em> needs!
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Tell story about the Lorax</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Schedule Pressures</h1>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <section>
+            <h1>Business Pressure</h1>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <section>
+            <h1>Changing Requirements</h1>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <section>
+            <h1>Code Practices</h1>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <section>
+            <h1>Incomplete Tests</h1>
+            <aside class="notes">
+            </aside>
+          </section>
+
+          <section>
+            <blockquote>"I repeat" cried the Lorax, "I speak for the trees"</blockquote>
+            <aside class="notes">
+              Transition slide
+            </aside>
+          </section>
+        </section>
+
+        <!-- Monitoring & Policies -->
+        <section>
+          <section>
+            <h1>How do you deal with technical debt?</h1>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Culture</h1>
+
+            <blockquote>
+              Being "green" requires everyone on board,<br>especially leadership.
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>Palantir: zero-emission, recycling, garden, bike</li>
+                <li>Communicating invisible negative value to stakeholders requires the backing of your company from the top down.</li>
+                <li>Cultivate an environment of good code.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Culture</h1>
+
+            <blockquote>
+              BDD language communicate business requirements without the business pressure (e.g. Gherkin).
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>BDD keeps it formal</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Culture</h1>
+
+            <blockquote>
+              PM's need to support their Lorax.
+            </blockquote>
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>Enable Lorax to influence business decisions</li>
+                <li>Toyota's Andon pullchord</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Culture</h1>
+
+            <blockquote>
+              PM's need to protect the focus of your team.<br>Keep business pressure out.
+            </blockquote>
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>focus is positively correlated with quality</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <!-- treat it with care / grow it -->
+            <h1>Design Patterns</h1>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Plan to Refactor</h1>
+
+            <blockquote>
+              Agile is prone to technical debt<br>because of YAGNI.
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>architecture and agile are oil and water (Kruchten)</li>
+                <li>If you start with a bicycle, you can't iterate to a race car. You need a rewrite.</li>
+                <li>tradeoff of BUFD vs pivoting</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Plan to Refactor</h1>
+
+            <blockquote>
+              "An excellent time to refactor code is right before you extend it." (<a href="http://c2.com/cgi/wiki?TechnicalDebt">Ward Cunningham</a>)
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>Build refactor time into your development cycle.</li>
+                <li>Consider adding refactor buffers into work estimates.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Test Driven Development<br>(TDD)</h1>
+
+            <aside class="notes">
+              <small>"the pre-release defect density of the four products decreased between 40% and 90% relative to similar projects that did not use the TDD practice. Subjectively, the teams experienced a 15–35% increase in initial development time after adopting TDD." <!--("<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>", Empirical Software Engineering 2008)--></small>
+
+              <ul>
+                <li>Presenter: Andrea</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <!-- protect from axes that hack -->
+            <h1>Continuous Integration</h1>
+
+            <blockquote>
+              Prevent pollution at the source.
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>analogy: coal scrubbers</li>
+                <li>configure IDE to throw errors</li>
+                <li>use Git hooks</li>
+                <li>use a CI system to send alerts when code fails quality metrics</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>Continuous Integration</h1>
+
+            <blockquote>
+              Define quality and<br>the tolerance level of pollution.<br>
+              <small>(See <a href="http://phpqatools.org/">phpqatools.org</a> and <a href="http://www.phpmetrics.org/">phpmetrics.org</a>)</small>
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Joe</li>
+                <li>phpcs: Code style violations</li>
+                <li>phpdcd: Dead code</li>
+                <li>phpcpd: Copy and paste</li>
+                <li>pdepend: Cyclomatic complexity (phpqatools)</li>
+                <li>Listen to PHPMD! single best</li>
+                <li>Use CodeClimate or Scruitinizer</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h1>PR Review</h1>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <blockquote>
+            UNLESS someone like you<br>
+            cares a whole awful lot,<br>
+            nothing is going to get better.<br>
+            It's not.
+            </blockquote>
+
+            <aside class="notes">
+              <ul>
+                <li>Presenter: Andrea</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+        </section>
+
+        <section>
+          <h1>References</h1>
+          <p><i>(In order of reference during presentation.)</i></p>
+          <ul>
+            <li>Dr. Seuss. <i>The Lorax</i>. New York: Random House, 1971. Print.</li>
+            <li>Brown, Paul. "<a href="http://www.theguardian.com/uk_news/story/0,3604,850909,00.html">50 years after the great smog, a new killer arises</a>." The Guardian, 2002.</li>
+            <li>Cunningham, Ward. "<a href="http://c2.com/doc/oopsla92.html">The WyCash Portfolio Management System</a>." c2.com, March 1992. Web. June 2015.</li>
+            <li>Fowler, Martin. "<a href="http://martinfowler.com/bliki/TechnicalDebtQuadrant.html">Technical Debt Quadrant</a>." martinfowler.com, October 2009. Web. June 2015.</li>
+            <li>Martin, Robert C. <i>Clean Code</i>. Boston: Prentice Hall, 2008. Print.</li>
+            <li>Krutchten, P. "<a href="http://pkruchten.wordpress.com/Talks">What colour is your backlog?</a>." pkruchten.wordpress.com, December 2013. Web. June 2015.
+            <li>Nagappan, Nachiappan, et all. "<a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">Realizing quality improvement through test driven development</a>." Empirical Software Engineering Volume 13. Issue 3 (2008): pp 289-302. Print.</li>
+            <li>The PHP Quality Assurance Toolchain. <a href="http://phpqatools.org/">http://phpqatools.org</a>.</li>
+            <li>PhpMetrics. <a href="http://www.phpmetrics.org/">http://phpmetrics.org</a>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Recommended Reading</h1>
+          <ul>
+            <li>All the references!</li>
+            <li>Brooks, Fred. <i>The Mythical Man-Month: Essays on Software Engineering </i>. Boston: Addison-Wesley, 1975. Print.</li>
+            <li>Gamma, Erich, et all. <i>Design Patterns: Elements of Reusable Object-Oriented Software</i>. Reading, Mass: Addison-Wesley, 1995. Print.</li>
+            <li>Denne, Mark, and Jane Cleland-Huang. <i>Software by Numbers: Low-Risk, High-Return Development</i>. Boston: Prentice Hall, 2003. Print.</li>
+            <li>Johann, Sven and Eberhard Wolff. "<a href="http://www.infoq.com/articles/managing-technical-debt">Managing Technical Debt</a>." www.infoq.com, May 2013. Web. June 2015.</li>
+            <li>Laribee, David. "<a href="https://msdn.microsoft.com/en-us/magazine/ee819135.aspx">Using Agile Techniques to Pay Back Technical Debt</a>." msdn.microsoft.com, December 2009. Web. June 2015.</li>
+            <li>Fowler, Martin. "<a href="http://martinfowler.com/bliki/DesignStaminaHypothesis.html">Design Stamina Hypothesis</a>." martinfowler.com, June 2007. Web. June 2015.</li>
+            <li>Cunningham, Ward. "<a href="http://c2.com/cgi-bin/wiki?FirstLawOfProgramming">First Law Of Programming</a>." c2.com, December 2014. Web. June 2015.</li>
+            <li>Cunningham, Ward. "<a href="http://c2.com/cgi/wiki?WardExplainsDebtMetaphor">Ward Explains Debt Metaphor</a>." c2.com, January 2011. Web. June 2015.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Recommended Reading Cont'd</h1>
+          <ul>
+            <li>P. Kruchten, R. Nord, and I. Ozkaya. "<a href="http://www.sei.cmu.edu/library/assets/whitepapers/Technical%20Debt-From%20Metaphor%20to%20Theory%20and%20Practice.pdf">Technical Debt: From Metaphor to Theory and Practice</a>." IEEE Software, Vol. 29. Issue 6 (2012):  pp. 18-21.</li>
+            <li>A. Martini, J. Bosch, and  M. Chaudron. "<a href="http://www.researchgate.net/profile/Antonio_Martini/publication/265822240_Architecture_Technical_Debt_Understanding_Causes_and_a_Qualitative_Model/links/541e98ac0cf203f155c06533.pdf">Architecture Technical Debt: Understanding Causes and a Qualitative Model</a>." www.researchgate.net, September 2014. Web. June 2015.</li>
+            <li>Ramakrishnan, Srinath. "<a href="https://www.scrumalliance.org/community/articles/2013/july/managing-technical-debt">Managing Technical Debt</a>." www.scrumalliance.org, July 2013. Web. June 2015.</li>
+            <li>Fowler, Martin. "<a href="http://martinfowler.com/articles/testing-culture.html">Goto Fail, Heartbleed, and Unit Testing Culture</a>." martinfowler.com, May 2014. Web. June 2015.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Thank You!</h1>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
 </html>
